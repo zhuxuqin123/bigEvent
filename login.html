@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <!-- 引入layui插件css文件 -->
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css" />
+    <!-- 引入layui字体图标文件样式  -->
+    <link rel="stylesheet" href="./assets/fonts/iconfont.css" />
+    <!-- 引入自己的css文件 -->
+    <link rel="stylesheet" href="./assets/login.css" />
+    <!-- 引入layui插件js文件 -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 引入jQuery文件 -->
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="./assets/login.js"></script>
+  </head>
 
-<body>
-
-</body>
-
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="" />
+      </div>
+      <!-- 登录区域 -->
+      <div class="login">
+        <div class="title">
+          <img src="./assets/images/login_title.png" alt="" />
+        </div>
+        <form class="layui-form" action="">
+          <div class="layui-form-item">
+            <div>
+              <i class="layui-icon layui-icon-username"></i>
+              <input
+                type="text"
+                name="username"
+                required
+                lay-verify="required"
+                placeholder="请输入用户名"
+                autocomplete="off"
+                class="layui-input"
+              />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div>
+              <i class="layui-icon layui-icon-password"></i>
+              <input
+                type="password"
+                name="password"
+                required
+                lay-verify="required"
+                placeholder="请输入密码"
+                autocomplete="off"
+                class="layui-input"
+              />
+            </div>
+          </div>
+          <button lay-submit class="layui-btn layui-btn-normal layui-btn-fluid">
+            登录
+          </button>
+        </form>
+        <!-- 注册区域 -->
+        <div class="register">
+          <a href="javascript:;">去注册账号</a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
